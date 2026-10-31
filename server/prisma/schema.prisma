@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id            String   @id @default(uuid())
+  name          String
+  email         String   @unique
+  password      String
+  role          String   @default("student")   // student | faculty | admin
+  program       String?                          // BSIT | BSCpE
+  studentId     String?
+  bio           String?
+  accountStatus String   @default("pending")    // pending | active | rejected
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model ResearchPaper {
+  id           String   @id @default(uuid())
+  title        String
+  thesisNumber String?
+  program      String   @default("BSIT") // BSIT | BSCpE
+  category     String
+  abstract     String
+  authors      String   // JSON serialized array of strings
+  keywords     String   // JSON serialized array of strings
+  year         Int
+  advisor      String
+  sourceUrl    String?
+  pdfUrl       String?
+  status       String   @default("pending") // pending | approved | rejected | archived
+  reviewNote   String?  // Reviewer remark shown to student when paper is pending
+  views        Int      @default(0)
+  citations    Int      @default(0)
+  submittedBy  String?
+  submittedAt  DateTime @default(now())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Faculty {
+  id             String   @id @default(uuid())
+  name           String
+  email          String   @unique
+  department     String   // Information Technology | Computer Engineering | CECT
+  specialization String
+  bio            String
+  initials       String
+  createdAt      DateTime @default(now())
+}
+
+model Category {
+  id          String @id @default(uuid())
+  name        String @unique
+  slug        String @unique
+  program     String @default("Both") // BSIT | BSCpE | Both
+  color       String
+  description String
+}
+
+model Activity {
+  id        String   @id @default(uuid())
+  type      String   // submission | approval | rejection | registration
+  detail    String
+  user      String
+  timestamp DateTime @default(now())
+}
+
+model Draft {
+  id           String   @id @default(uuid())
+  title        String?
+  thesisNumber String?
+  program      String?
+  category     String?
+  abstract     String?
+  authors      String?  // JSON string
+  keywords     String?
+  advisor      String?
+  sourceUrl    String?
+  year         Int?
+  submittedBy  String
+  savedAt      DateTime @default(now())
+}

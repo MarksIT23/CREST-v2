@@ -1,0 +1,9 @@
+# Caching & Range Headers for Media & Static Assets
+/videos/*
+  Cache-Control: public, max-age=31536000, s-maxage=31536000, immutable
+  Accept-Ranges: bytes
+  Access-Control-Allow-Origin: *
+
+/assets/*
+  Cache-Control: public, max-age=31536000, s-maxage=31536000, immutable
+  Access-Control-Allow-Origin: *

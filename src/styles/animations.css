@@ -1,0 +1,85 @@
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+
+  .animate-float-slow {
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Soft breathing glow for background orbs */
+  .animate-orb {
+    animation: orbPulse 7s ease-in-out infinite;
+  }
+
+  .animate-orb-delayed {
+    animation: orbPulse 9s ease-in-out 2.5s infinite;
+  }
+
+  @keyframes orbPulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.15); }
+  }
+
+  /* Infinite marquee strip (track must contain 2 copies for seamless loop) */
+  .animate-marquee {
+    animation: marquee 60s linear infinite;
+  }
+
+  .marquee:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Slow horizontal shimmer for gradient text */
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradientX 6s ease infinite;
+  }
+
+  @keyframes gradientX {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Diagonal light sweep across hero imagery */
+  .shine {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    background: linear-gradient(105deg, transparent 0%, rgba(255, 255, 255, 0.45) 50%, transparent 100%);
+    transform: translateX(-160%);
+    transition: transform 0.9s ease;
+    pointer-events: none;
+  }
+
+  .group:hover .shine {
+    transform: translateX(320%);
+  }
+}

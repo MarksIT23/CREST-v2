@@ -1,0 +1,224 @@
+:root {
+  /* CREST (Wesleyan CECT) - Design System Colors */
+  --color-primary: #171717;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #e5e5e5;
+  --color-on-primary-container: #171717;
+
+  --color-secondary: #525252;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e5e5e5;
+  --color-on-secondary-container: #171717;
+
+  --color-tertiary: #943700;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #bc4800;
+  --color-on-tertiary-container: #ffede6;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* Archival stamp red — reserved for status stamps, one primary action per view, active markers */
+  --color-stamp: #9a1b1e;
+  --color-on-stamp: #ffffff;
+
+  --color-background: #fcfcf7;
+  --color-on-background: #171717;
+  --color-surface: #ffffff;
+  --color-on-surface: #171717;
+  --color-surface-variant: #ece9e0;
+  --color-on-surface-variant: #57534e;
+  --color-outline: #a8a29e;
+  --color-outline-variant: #e0dcd2;
+}
+
+/* Theme variations: swapped via [data-theme] on <html> (see ThemeContext.jsx).
+   Only ink (#700-#950) and paper (#50-#200) stops are remapped, so muted grays
+   (#300-#600) stay legible on every palette; "archive" is the :root block above. */
+
+:root[data-theme="institute-blue"] {
+  --color-primary: #14315e;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #dbe6f5;
+  --color-on-primary-container: #0f1f3d;
+  --color-secondary: #475569;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #dbe6f5;
+  --color-on-secondary-container: #0f1f3d;
+  --color-tertiary: #0e7490;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #cff1f7;
+  --color-on-tertiary-container: #04323c;
+  --color-stamp: #1e3a8a;
+  --color-on-stamp: #ffffff;
+  --color-background: #f7f9fc;
+  --color-on-background: #0f1f3d;
+  --color-surface: #ffffff;
+  --color-on-surface: #0f1f3d;
+  --color-surface-variant: #e8eef7;
+  --color-on-surface-variant: #475569;
+  --color-outline: #94a3b8;
+  --color-outline-variant: #d7e0ec;
+  --color-neutral-50: #f7f9fc;
+  --color-neutral-100: #eef3fa;
+  --color-neutral-200: #dbe4f0;
+  --color-neutral-700: #274f88;
+  --color-neutral-800: #1b3f72;
+  --color-neutral-900: #14315e;
+  --color-neutral-950: #0c1c33;
+}
+
+:root[data-theme="slate-mist"] {
+  --color-primary: #1e293b;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #e2e8f0;
+  --color-on-primary-container: #0f172a;
+  --color-secondary: #475569;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e2e8f0;
+  --color-on-secondary-container: #0f172a;
+  --color-tertiary: #0369a1;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #dbeafe;
+  --color-on-tertiary-container: #082f49;
+  --color-stamp: #334155;
+  --color-on-stamp: #ffffff;
+  --color-background: #f8fafc;
+  --color-on-background: #1e293b;
+  --color-surface: #ffffff;
+  --color-on-surface: #1e293b;
+  --color-surface-variant: #eef2f7;
+  --color-on-surface-variant: #526275;
+  --color-outline: #9aa8bb;
+  --color-outline-variant: #dbe3ec;
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-700: #475569;
+  --color-neutral-800: #334155;
+  --color-neutral-900: #1e293b;
+  --color-neutral-950: #0f172a;
+}
+
+:root[data-theme="sage-commons"] {
+  --color-primary: #2f4a34;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #dbe7d6;
+  --color-on-primary-container: #17281a;
+  --color-secondary: #55684f;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #dbe7d6;
+  --color-on-secondary-container: #17281a;
+  --color-tertiary: #8a6d1f;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #f2e3b8;
+  --color-on-tertiary-container: #3a2c05;
+  --color-stamp: #3f5d43;
+  --color-on-stamp: #ffffff;
+  --color-background: #f6f8f4;
+  --color-on-background: #22301f;
+  --color-surface: #ffffff;
+  --color-on-surface: #22301f;
+  --color-surface-variant: #e6ece2;
+  --color-on-surface-variant: #4e5a4d;
+  --color-outline: #9aa896;
+  --color-outline-variant: #d8e2d3;
+  --color-neutral-50: #f6f8f4;
+  --color-neutral-100: #eef2ea;
+  --color-neutral-200: #e0e7da;
+  --color-neutral-700: #3f5a45;
+  --color-neutral-800: #33493a;
+  --color-neutral-900: #2f4a34;
+  --color-neutral-950: #1b2e20;
+}
+
+:root[data-theme="heritage-claret"] {
+  --color-primary: #6b1f2a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #f2dde0;
+  --color-on-primary-container: #3f1219;
+  --color-secondary: #7d4a4f;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #f2dde0;
+  --color-on-secondary-container: #3f1219;
+  --color-tertiary: #b8860b;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #f6e4b4;
+  --color-on-tertiary-container: #3d2c02;
+  --color-stamp: #7a1f28;
+  --color-on-stamp: #ffffff;
+  --color-background: #fdf8f4;
+  --color-on-background: #2a1518;
+  --color-surface: #ffffff;
+  --color-on-surface: #2a1518;
+  --color-surface-variant: #f0e4dd;
+  --color-on-surface-variant: #6b4f4a;
+  --color-outline: #b89a92;
+  --color-outline-variant: #e8d8cf;
+  --color-neutral-50: #fdf8f4;
+  --color-neutral-100: #f8efe8;
+  --color-neutral-200: #f0e0d6;
+  --color-neutral-700: #7d3742;
+  --color-neutral-800: #6b2530;
+  --color-neutral-900: #6b1f2a;
+  --color-neutral-950: #3f1219;
+}
+
+@layer utilities {
+  /* Editorial surfaces — flat white, warm hairline border, soft warm shadow */
+  .glass-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-outline-variant);
+    box-shadow: 0 1px 2px rgba(23, 23, 23, 0.04), 0 12px 32px rgba(23, 23, 23, 0.06);
+  }
+
+  .glass-panel {
+    background: var(--color-background);
+    border: 1px solid var(--color-outline-variant);
+    box-shadow: 0 1px 2px rgba(23, 23, 23, 0.04);
+  }
+
+  .luminous-shadow {
+    box-shadow: 0 12px 40px 0 rgba(23, 23, 23, 0.1);
+  }
+
+  /* Rubber stamp — solid archival seal. Color via background/text utilities. */
+  .stamp {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border: 2px solid currentColor;
+    border-radius: 6px;
+    padding: 3px 10px;
+    transform: rotate(-1.5deg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stamp {
+      transform: none;
+    }
+  }
+
+  .glow-orb {
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.22;
+  }
+  
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

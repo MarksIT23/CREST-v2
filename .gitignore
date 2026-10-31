@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.agent
+server/prisma/*.db
+server/prisma/*.db-journal
+server/node_modules
+# Local revert-safety backups
+*.bak
+# Runtime manuscript uploads (seed samples excluded)
+server/uploads/papers/*.pdf
+
+# Environment secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Local tooling config
+.mcp.json
