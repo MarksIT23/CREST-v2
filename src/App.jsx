@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import CursorGlow from './components/ui/CursorGlow';
+import WipBanner from './components/ui/WipBanner';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 
 // Lazy loaded pages
@@ -77,6 +78,7 @@ function Shell() {
 
       {!isAdminArea && <Navbar />}
       <CursorGlow />
+      <WipBanner />
       <ScrollToTop />
 
       <main className={`flex-1 relative z-10 ${isHome || isAbout || isAdminArea ? '' : 'pt-[76px]'}`}>

@@ -10,18 +10,20 @@ import heroPoster from '../assets/hero.png';
 // restructuring layout. GIF is treated as an image. Video mutes/loops inline.
 // Theme-independent: hero owns a neutral black/white palette.
 // ---------------------------------------------------------------------------
+const BASE = import.meta.env.BASE_URL;
+
 const HERO_MEDIA = {
   type: 'video', // 'image' | 'gif' | 'video'
   image: heroPoster,
   gif: heroPoster,
-  video: '/videos/hero-2.mp4',
+  video: `${BASE}videos/hero-2.mp4`,
   // Playlist: videos play one after another, looping forever. Served from /public/videos/
   // with immutable edge CDN caching and smart lazy-preloading to minimize egress.
   videos: [
-    '/videos/hero-2.mp4',
-    '/videos/hero-1.mp4',
-    '/videos/hero-3.mp4',
-    '/videos/hero-4.mp4',
+    `${BASE}videos/hero-2.mp4`,
+    `${BASE}videos/hero-1.mp4`,
+    `${BASE}videos/hero-3.mp4`,
+    `${BASE}videos/hero-4.mp4`,
   ],
   poster: heroPoster,
   fallbackImage:
