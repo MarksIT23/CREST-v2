@@ -175,7 +175,7 @@ function Shell() {
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '') || '/'}>
         <Shell />
       </Router>
     </AuthProvider>
